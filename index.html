@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christopher H. Seward, PhD | Genomics scientist and bioinformatician</title>
+<meta name="description" content="Christopher H. Seward: long-read genomics of X-inactivation, methylation episignatures, stress biology and gestational diabetes.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Christopher H. Seward, PhD | Genomics scientist and bioinformatician">
+<meta property="og:description" content="Long-read genomics of X-inactivation and structural variants (XCITE), methylation episignatures, and stress and pregnancy genomics. Profile, CV and biosketch.">
+<meta property="og:url" content="https://chseward.github.io/">
+<meta property="og:image" content="https://chseward.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<style>
+  :root {
+    --ink: #1f2933; --muted: #52606d; --rule: #d9e2ec; --bg: #ffffff; --panel: #f5f7fa;
+    --xci: #7b3294; --epi: #1b7837; --stress: #b35806; --gdm: #2166ac;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.6 -apple-system, "Segoe UI", "Source Sans 3", Roboto, Helvetica, Arial, sans-serif;
+         color: var(--ink); background: var(--bg); }
+  a { color: var(--gdm); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  header { border-bottom: 1px solid var(--rule); padding: 48px 0 32px; }
+  header h1 { margin: 0; font-size: 2.2rem; letter-spacing: -0.01em; }
+  header .role { margin: 6px 0 0; color: var(--muted); font-size: 1.1rem; }
+  header .lede { margin: 20px 0 0; max-width: 46em; }
+  nav { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+  nav a { text-decoration: none; font-size: 0.92rem; padding: 4px 12px; border-radius: 999px;
+          border: 1px solid var(--rule); color: var(--ink); }
+  nav a:hover { background: var(--panel); }
+  section { padding: 36px 0 8px; border-bottom: 1px solid var(--rule); }
+  section h2 { margin: 0 0 4px; font-size: 1.45rem; padding-left: 14px; border-left: 5px solid var(--c, var(--ink)); }
+  section .tag { margin: 0 0 16px; padding-left: 19px; color: var(--muted); font-size: 0.98rem; }
+  #xci { --c: var(--xci); } #epi { --c: var(--epi); } #stress { --c: var(--stress); } #gdm { --c: var(--gdm); }
+  ul { padding-left: 1.2em; } li { margin: 4px 0; }
+  .box { background: var(--panel); border-radius: 8px; padding: 14px 18px; margin: 16px 0 24px; font-size: 0.96rem; }
+  .box b { color: var(--c, var(--ink)); }
+  .pubs li { margin: 10px 0; font-size: 0.95rem; }
+  .pubs .t { font-weight: 600; }
+  #pubs h3 { margin: 20px 0 4px; font-size: 1.05rem; }
+  .pubs .me { font-weight: 700; }
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 28px; }
+  .skills h3 { margin: 0 0 4px; font-size: 1rem; }
+  .skills p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 0.88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Christopher H. Seward, PhD</h1>
+  <p class="role">Staff Genomics Scientist &middot; Pacific Northwest Research Institute (PNRI), Seattle</p>
+  <p class="lede">I am a genomics scientist working in long-read genetics and epigenetics. Long-read genomes
+  read a person's variants and their DNA methylation from the same molecules; I build methods that use both
+  at once, and apply them to X-linked disease, methylation episignatures, and how stress and metabolism shape
+  pregnancy outcomes. I trained in microbiology (BS, University of Rochester) and took my PhD in Cell and
+  Developmental Biology at the University of Illinois with Lisa Stubbs, working on the genomics of social behaviour,
+  stress and metabolism. PNRI made my position independent in 2025, and since July 2025 I have worked with Claudia Carvalho&rsquo;s
+  group, supported by her grants.
+  Building on the epigenomics I did with Lisa, that work has given me deep experience in clinical human genomics: structural variants, long reads, DNA methylation
+  and rare-disease family studies. I also continue my own projects, and with Lisa Stubbs, who left PNRI in 2025, I am co-PI of a proposed study
+  of stress and pregnancy.</p>
+  <nav>
+    <a href="cv.html"><b>CV</b></a>
+    <a href="biosketch.html"><b>Biosketch</b></a>
+    <a href="#bring">What I bring</a>
+    <a href="#program">Program</a>
+    <a href="#xci">X-inactivation</a>
+    <a href="#epi">Episignatures</a>
+    <a href="#stress">Stress</a>
+    <a href="#gdm">Gestational diabetes</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#approach">Approach</a>
+    <a href="#talks">Presentations</a>
+    <a href="#pubs">Publications</a>
+    <a href="#honors">Honors</a>
+  </nav>
+</header>
+
+<section id="bring">
+  <h2>What I bring</h2>
+  <p class="tag">A bioinformatician who knows the biology and the experiment</p>
+  <div class="skills">
+    <div><h3>Computation</h3><p>Computational biology and bioinformatics: tested, versioned pipelines, statistics and
+      machine learning for long-read, single-cell, imaging and clinical data (Python, R, Slurm, Docker, AWS), across
+      cohorts of more than 2,000 genomes.</p></div>
+    <div><h3>Experimental design</h3><p>Bench work in microbiology, cell biology, neuroscience, imaging, genetics and
+      genomics for more than 15 years: single-cell and spatial transcriptomics, ChIP-seq, CUT&amp;RUN and Hi-C, super-resolution
+      and 3D light-sheet imaging, and mouse models from breeding to behaviour.</p></div>
+    <div><h3>Safety and clinical</h3><p>BSL-2 pathogen work; mouse handling, breeding and behaviour; protected human
+      clinical data in rare-disease genomics (CITI certified).</p></div>
+  </div>
+  <p>Because I have run the experiments myself, I design analyses that fit the biology and the experimental design.
+  My 18 papers and preprints span microbiology, neuroscience, chromatin biology, imaging, computational methods and
+  human genomics, with five more in preparation.</p>
+</section>
+
+<section id="program">
+  <h2>Research program</h2>
+  <p class="tag">Two lines of work in Claudia Carvalho&rsquo;s group, and one I co-lead with Lisa Stubbs</p>
+  <ul>
+    <li><b>Which X is active, and does it decide who is affected?</b> Reading X-inactivation and the position of
+      each variant from a woman's own genome, across X-linked disorders, without a separate clinical assay.</li>
+    <li><b>Can one long-read genome carry the diagnosis and the episignature?</b> Testing long-read methylation as a
+      clinical readout, with the age and batch controls that new signatures need.</li>
+    <li><b>How do stress, genetics and methylation combine in pregnancy?</b> As co-PI with Lisa Stubbs: long-read genomes and RNA in a
+      diverse pregnancy cohort, to find who is at risk of gestational diabetes before diagnosis.</li>
+  </ul>
+</section>
+
+<section id="xci">
+  <h2>X-chromosome inactivation from long reads (XCITE)</h2>
+  <p class="tag">With Claudia Carvalho&rsquo;s group, since July 2025</p>
+  <p>Every cell in a woman's body silences one of her two X chromosomes. When most cells silence the same one
+  ("skewed" X-inactivation), it can protect a woman who carries a harmful X-linked variant, or leave her affected.
+  The clinical test for skew (HUMARA) reads a single site, fails in many women, and cannot say which X carries
+  the variant.</p>
+  <p>I developed <b>XCITE</b>, which measures X-inactivation from the PacBio HiFi or Oxford Nanopore long reads a
+  lab already has. It separates each woman's two X chromosomes by repeat length and nearby variants, compares
+  methylation between them at promoter CpG islands across the chromosome, and reports:</p>
+  <ul>
+    <li>the skew ratio, chromosome-wide and region by region, calibrated against the clinical assay;</li>
+    <li>which X carries a variant (structural variants, indels or SNVs), and whether that X is the active or the silenced one;</li>
+    <li>the parent of origin of the variant when relatives are sequenced.</li>
+  </ul>
+  <p>We applied it to a cohort of families with <i>MECP2</i> duplications and other Xq28 rearrangements to
+  ask why many women who carry these rearrangements are unaffected while others are affected, and where the
+  rearrangements arise. XCITE agrees with the clinical HUMARA assay (r = 0.97, n = 12), and in a cohort of more than
+  80 women, 12 of 16 carrier mothers carried the duplication on the inactive X (ASHG 2026).</p>
+  <div class="box"><b>Presented:</b> ASHG 2026 (poster, Montr&eacute;al) and the Long-Read Sequencing Symposium 2026
+  (talk, Seattle Children's). Manuscripts in preparation with Claudia Carvalho&rsquo;s group and collaborators at Baylor College of Medicine;
+  preprint and code release in preparation.</div>
+</section>
+
+<section id="epi">
+  <h2>Methylation episignatures</h2>
+  <p class="tag">With Claudia Carvalho&rsquo;s group, since July 2025</p>
+  <p>Many neurodevelopmental disorders leave a recognisable genome-wide methylation pattern, an
+  "episignature", now used clinically on methylation arrays. Long-read genomes measure methylation at nearly
+  every CpG with no extra assay, so the same data could detect the variant and its episignature together.</p>
+  <ul>
+    <li>With Claudia Carvalho&rsquo;s group and the EpiSign team (using EpiSign&rsquo;s array cohort), testing whether the
+      <i>MECP2</i> duplication syndrome episignature defined on clinical methylation arrays can be read from PacBio
+      long-read methylation data (manuscript in preparation).</li>
+    <li>Searching for new long-read signatures with held-out testing, permutation nulls and stability checks.</li>
+    <li>Built the controls (age exclusion, within-batch nulls, cross-sex scoring) that a long-read episignature needs,
+      because age and methylation-caller batch can mimic a signature.</li>
+  </ul>
+</section>
+
+<section id="stress">
+  <h2>Genomics of stress, metabolism and social behaviour</h2>
+  <p class="tag">PhD and postdoctoral work with Lisa Stubbs; senior author on the <i>Tcf7l2</i> studies</p>
+  <p>How does a social challenge change the brain? Across mice, sticklebacks and honey bees we measured how gene
+  expression and chromatin respond over time to social challenge and stress, and found a shared toolkit of
+  responses, with metabolic and neural programmes switching on together.</p>
+  <ul>
+    <li>Transcriptional and epigenomic time courses of the brain's response to social challenge.</li>
+    <li>Cross-species comparison of neurogenomic responses (mouse, fish, bee).</li>
+    <li>An epigenomic shift in the amygdala that marks the onset of maternal behaviour.</li>
+    <li>Mouse models of neurodevelopmental genes (<i>AUTS2</i>, <i>Galnt17</i>) linking molecular, brain and
+      behavioural pathology.</li>
+  </ul>
+  <p>My PhD showed that the WNT effector <i>Tcf7l2</i>, the strongest common genetic risk factor for type 2
+  diabetes, sits at the nexus of metabolic regulation, the stress response of hypothalamic cells and social
+  behaviour. Mouse models that lose its long isoform across the brain or only in the hypothalamus show disturbed
+  circadian rhythms, susceptibility to diet-induced obesity, and abnormalities of the thalamus and hypothalamus
+  (two manuscripts in preparation, as senior author).</p>
+</section>
+
+<section id="gdm">
+  <h2>Stress and gestational diabetes</h2>
+  <p class="tag">Co-PI with Lisa Stubbs &middot; proposed genomics study</p>
+  <p>Gestational diabetes (GDM) is common and rising, and children
+  exposed to it carry a higher lifetime risk of metabolic disease. Psychosocial stress is one of the suspected
+  drivers. This work grew out of <a href="https://pnri.org/galas-lab/decoding-stress-galas/">the Galas Project</a>, a PNRI pilot study of the genetics of maternal stress and
+  pregnancy complications, in which I characterized candidate genes such as <i>TCF7L2</i> in clinical and
+  model-system data. Since Lisa Stubbs left PNRI in 2025 I have continued my earlier projects with her on my own time, with
+  PNRI&rsquo;s approval. With her I am co-PI of a proposed genomics study, grown out of the Galas pilot, in a large,
+  diverse, prospective pregnancy cohort that studies how stress leads to GDM; if funded, I would be its genomics lead.</p>
+  <ul>
+    <li>Long-read genomes that give each woman's variants, structural variants and methylation from one assay,
+      including the ancestries that genotyping arrays and imputation panels serve worst.</li>
+    <li>Blood RNA sequencing early and late in pregnancy, adding early-pregnancy signals to a predictor tested on
+      held-out women.</li>
+    <li>Power modelling to keep the design focused on a predictive test that can be validated, with the same
+      held-out testing I use for long-read methylation signatures.</li>
+  </ul>
+</section>
+
+<section id="leadership">
+  <h2>Leadership</h2>
+  <p class="tag">Programs, people and infrastructure</p>
+  <ul>
+    <li><b>Since 2025:</b> developed XCITE and long-read episignatures in Claudia Carvalho&rsquo;s group (two
+      first-author manuscripts in preparation); senior author on two <i>Tcf7l2</i> manuscripts from work with Lisa Stubbs.</li>
+    <li><b>Funding:</b> co-investigator on an NIH R01 (PI Michael Metzger) using bivalve transmissible neoplasia as a model for AML,
+      where I run the spatial transcriptomics and single-cell analysis. With Lisa Stubbs, I am co-PI of a proposed
+      genomics study of stress and gestational diabetes.</li>
+    <li><b>Building research capacity:</b> helped lead the Stubbs lab&rsquo;s move to PNRI in 2020 (more than $1M in
+      equipment); founded PNRI's imaging core (10x Visium spatial transcriptomics, super-resolution confocal and 3D light-sheet microscopy); lead PNRI&rsquo;s
+      genomics computing and high-performance computing modernization.</li>
+    <li><b>Mentoring:</b> core member of the Stubbs lab through 2025, co-managing a team of seven or more technicians,
+      graduate students and postdocs with Lisa Stubbs (2022&ndash;2025); genomics advisor to the Metzger and McLaughlin labs.</li>
+  </ul>
+</section>
+
+<section id="approach">
+  <h2>Approach</h2>
+  <div class="skills">
+    <div><h3>Clinical human genomics</h3><p>Rare-disease family studies across more than 2,000 genomes (the Carvalho
+      lab&rsquo;s full cohort and GREGoR Consortium data): SV breakpoints,
+      methylation and inheritance, checked against clinical assays (HUMARA, aCGH, EpiSign).</p></div>
+    <div><h3>Long-read genomics</h3><p>PacBio HiFi and ONT: phasing, structural variants, tandem repeats,
+      5mC methylation.</p></div>
+    <div><h3>Pipelines that scale</h3><p>Cohort-scale analysis of more than 2,000 genomes on Slurm, AWS and AnVIL (GATK,
+      Parliament2, SV and methylation calling), and tested Python pipelines with versioned, re-runnable studies.</p></div>
+    <div><h3>Statistics with honest nulls</h3><p>Permutation and held-out testing, batch and age confounds named
+      and controlled.</p></div>
+    <div><h3>Functional genomics</h3><p>RNA-seq, ChIP-seq, CUT&amp;RUN, ATAC-seq, Hi-C and capture Hi-C,
+      single-cell and spatial transcriptomics.</p></div>
+    <div><h3>Optical mapping and SVs</h3><p>De novo structural variant analysis combining long reads, short reads and
+      Bionano optical maps.</p></div>
+    <div><h3>Imaging</h3><p>Super-resolution confocal, 3D light-sheet and two-photon microscopy of cleared tissue.</p></div>
+  </div>
+</section>
+
+<section id="talks">
+  <h2>Presentations</h2>
+  <ul>
+    <li><b>ASHG 2026</b>, Montr&eacute;al (poster, October 2026): <i>Measuring X-chromosome inactivation skew from
+      tandem repeats and epigenetics in long-read genomes.</i></li>
+    <li><b>Long-Read Sequencing Symposium 2026</b>, Seattle Children's (talk, October 2026): <i>Measuring
+      X-chromosome inactivation skew from tandem repeats and epigenetics in long-read genomes.</i></li>
+    <li><b>Earlier:</b> posters and talks at the Gordon Research Conference on Chromatin Structure and Function (2018),
+      the Society for Behavioral Neuroendocrinology (2017), IBANGS (2016), the U.S.&ndash;Japan Cholera Conference (2015) and
+      the International Symposium on Microbial Ecology (2014).</li>
+  </ul>
+</section>
+
+<section id="pubs">
+  <h2>Publications</h2>
+  <p class="tag">* equal contribution &middot; &dagger; senior author &middot; <a href="https://www.ncbi.nlm.nih.gov/myncbi/christopher.seward.1/bibliography/public/">complete list (NCBI)</a> &middot; <a href="https://scholar.google.com/citations?user=d4uQuFsAAAAJ">Google Scholar</a></p>
+  <h3>In preparation</h3>
+  <ul class="pubs">
+    <li><span class="me">Seward CH</span>, &hellip;, Carvalho CMB. <span class="t">X-inactivation skew from long-read genomes (XCITE).</span> <i>In preparation</i>, 2026.</li>
+    <li><span class="me">Seward CH</span>, &hellip;, Sadikovic B, Carvalho CMB. <span class="t">A long-read <i>MECP2</i> duplication episignature.</span> <i>In preparation</i>, 2026.</li>
+    <li>Bengtsson JD, &hellip;, <span class="me">Seward CH</span>, &hellip;, Carvalho CMB. <span class="t">Structure of Xq28 duplications.</span> <i>In preparation</i>, 2026.</li>
+    <li>Patton K, LeBlanc A, Pandit J, Stubbs L, <span class="me">Seward CH</span>&dagger;. <span class="t">Targeted loss of Tcf7l2 long isoform brain-wide, or specifically in hypothalamus, is associated with disturbed circadian rhythms and heightened susceptibility to diet-induced obesity.</span> <i>In preparation</i>, 2026.</li>
+    <li>Patton K, Meyers A, Stubbs L, <span class="me">Seward CH</span>&dagger;. <span class="t">Brain-wide loss of Tcf7l2 long-isoform function leads to massive abnormalities of the thalamus, third ventricle, and hypothalamus with impact on genes regulating metabolic and behavioral circuits.</span> <i>In preparation</i>, 2026.</li>
+  </ul>
+  <h3>Preprints</h3>
+  <ul class="pubs">
+    <li>Bhogale S, <span class="me">Seward CH</span>, Stubbs L, Sinha S. <span class="t">SEAMoD: a fully interpretable neural network for cis-regulatory analysis of differentially expressed genes.</span> <i>bioRxiv</i> 2023. <a href="https://doi.org/10.1101/2023.11.09.565900">doi:10.1101/2023.11.09.565900</a></li>
+  </ul>
+  <h3>Published</h3>
+  <ul class="pubs">
+    <li>Ulbrich M, <span class="me">Seward CH</span>, Ivanov AI, Ward BM, Butler JS, Dziejman M. <span class="t">VopX, a novel <i>Vibrio cholerae</i> T3SS effector, modulates host actin dynamics.</span> <i>mBio</i> 2025. <a href="https://doi.org/10.1128/mbio.03018-24">doi:10.1128/mbio.03018-24</a></li>
+    <li>Song Y, <span class="me">Seward CH</span>, Chen CY, LeBlanc A, Leddy AM, Stubbs L. <span class="t">Isolated loss of the AUTS2 long isoform, brain-wide or targeted to Calbindin-lineage cells, generates a specific suite of brain, behavioral, and molecular pathologies.</span> <i>Genetics</i> 2024. <a href="https://doi.org/10.1093/genetics/iyad182">doi:10.1093/genetics/iyad182</a></li>
+    <li>Chen CY, <span class="me">Seward CH</span>, Song Y, Inamdar M, Leddy AM, Zhang H, Yoo J, Kao WC, Pawlowski H, Stubbs LJ. <span class="t">Galnt17 loss-of-function leads to developmental delay and abnormal coordination, activity, and social interactions with cerebellar vermis pathology.</span> <i>Dev Biol</i> 2022. <a href="https://doi.org/10.1016/j.ydbio.2022.08.002">doi:10.1016/j.ydbio.2022.08.002</a></li>
+    <li><span class="me">Seward CH</span>*, Saul MC*, Troy JM, Dibaeinia P, Zhang H, Sinha S, Stubbs LJ. <span class="t">An epigenomic shift in amygdala marks the transition to maternal behaviors in alloparenting virgin female mice.</span> <i>PLoS One</i> 2022. <a href="https://doi.org/10.1371/journal.pone.0263632">doi:10.1371/journal.pone.0263632</a></li>
+    <li>Saha A, <span class="me">Seward CH</span>, Stubbs L, Mizzen CA. <span class="t">Site-specific phosphorylation of histone H1.4 is associated with transcription activation.</span> <i>Int J Mol Sci</i> 2020. <a href="https://doi.org/10.3390/ijms21228861">doi:10.3390/ijms21228861</a></li>
+    <li>Lee J, Molley TG, <span class="me">Seward CH</span>, Abdeen AA, Zhang H, Wang X, Gandhi H, Yang JL, Gaus K, Kilian KA. <span class="t">Geometric regulation of histone state directs melanoma reprogramming.</span> <i>Commun Biol</i> 2020. <a href="https://doi.org/10.1038/s42003-020-1067-1">doi:10.1038/s42003-020-1067-1</a></li>
+    <li>Saul MC, Blatti C, Yang W, Bukhari SA, Shpigler HY, Troy JM, <span class="me">Seward CH</span>, Sloofman L, Chandrasekaran S, Bell AM, Stubbs L, Robinson GE, Zhao SD, Sinha S. <span class="t">Cross-species systems analysis of evolutionary toolkits of neurogenomic response to social challenge.</span> <i>Genes Brain Behav</i> 2019. <a href="https://doi.org/10.1111/gbb.12502">doi:10.1111/gbb.12502</a></li>
+    <li>Shpigler HY, Saul MC, Murdoch EE, Corona F, Cash-Ahmed AC, <span class="me">Seward CH</span>, Chandrasekaran S, Stubbs LJ, Robinson GE. <span class="t">Honey bee neurogenomic responses to affiliative and agonistic social interactions.</span> <i>Genes Brain Behav</i> 2019. <a href="https://doi.org/10.1111/gbb.12509">doi:10.1111/gbb.12509</a></li>
+    <li>Boateng K, Cyphersmith A, Fried G, Sivaguru B, Lu X, <span class="me">Seward CH</span>, Ko E, Kong H, Sivaguru M. <span class="t">3D imaging of BABB cleared whole-mount organs using light sheet microscopy.</span> <i>Microsc Microanal</i> 2018. <a href="https://doi.org/10.1017/S1431927618007432">doi:10.1017/S1431927618007432</a></li>
+    <li>Bukhari SA, Saul MC, <span class="me">Seward CH</span>, Zhang H, Bensky M, James N, Zhao SD, Chandrasekaran S, Stubbs L, Bell AM. <span class="t">Temporal dynamics of neurogenomic plasticity in response to social interactions in male threespined sticklebacks.</span> <i>PLoS Genet</i> 2017. <a href="https://doi.org/10.1371/journal.pgen.1006840">doi:10.1371/journal.pgen.1006840</a></li>
+    <li>Shpigler HY, Saul MC, Murdoch EE, Cash-Ahmed AC, <span class="me">Seward CH</span>, Sloofman L, Chandrasekaran S, Sinha S, Stubbs LJ, Robinson GE. <span class="t">Behavioral, transcriptomic and epigenetic responses to social challenge in honey bees.</span> <i>Genes Brain Behav</i> 2017. <a href="https://doi.org/10.1111/gbb.12379">doi:10.1111/gbb.12379</a></li>
+    <li>Saul MC*, <span class="me">Seward CH</span>*, Troy JM, Zhang H, Sloofman LG, Lu X, Weisner PA, Caetano-Anolles D, Sun H, Zhao SD, Chandrasekaran S, Sinha S, Stubbs L. <span class="t">Transcriptional regulatory dynamics drive coordinated metabolic and neural response to social challenge in mice.</span> <i>Genome Res</i> 2017. <a href="https://doi.org/10.1101/gr.214221.116">doi:10.1101/gr.214221.116</a></li>
+    <li>Anderson RE, Kouris A, <span class="me">Seward CH</span>, Campbell KM, Whitaker RJ. <span class="t">Structured populations of <i>Sulfolobus acidocaldarius</i> with susceptibility to mobile genetic elements.</span> <i>Genome Biol Evol</i> 2017. <a href="https://doi.org/10.1093/gbe/evx104">doi:10.1093/gbe/evx104</a></li>
+    <li>Sun Y, Zhang H, Kazemian M, Troy JM, <span class="me">Seward CH</span>, Lu X, Stubbs L. <span class="t">ZSCAN5B and primate-specific paralogs bind RNA polymerase III genes and extra-TFIIIC (ETC) sites to modulate mitotic progression.</span> <i>Oncotarget</i> 2016. <a href="https://doi.org/10.18632/oncotarget.12508">doi:10.18632/oncotarget.12508</a></li>
+    <li>Miller KA, Sofia MK, Weaver JWA, <span class="me">Seward CH</span>, Dziejman M. <span class="t">Regulation by ToxR-like proteins converges on vttRB expression to control type 3 secretion system-dependent Caco2-BBE cytotoxicity in <i>Vibrio cholerae</i>.</span> <i>J Bacteriol</i> 2016. <a href="https://doi.org/10.1128/JB.00130-16">doi:10.1128/JB.00130-16</a></li>
+    <li>Zhang H*, <span class="me">Seward CH</span>*, Wu Z, Ye H, Feng Y. <span class="t">Genomic insights into the ESBL and MCR-1-producing ST648 <i>Escherichia coli</i> with multi-drug resistance.</span> <i>Sci Bull</i> 2016. <a href="https://doi.org/10.1007/s11434-016-1086-y">doi:10.1007/s11434-016-1086-y</a></li>
+    <li><span class="me">Seward CH</span>, Manzella A, Alam A, Butler JS, Dziejman M. <span class="t">Using <i>S. cerevisiae</i> as a model system to investigate <i>V. cholerae</i> VopX-host cell protein interactions and phenotypes.</span> <i>Toxins</i> 2015. <a href="https://doi.org/10.3390/toxins7104099">doi:10.3390/toxins7104099</a></li>
+  </ul>
+</section>
+
+<section id="honors">
+  <h2>Honors and memberships</h2>
+  <ul>
+    <li><b>Member,</b> American Society of Human Genetics (2026&ndash;) and GREGoR Consortium (2025&ndash;, through the Carvalho lab); formerly International
+      Behavioral and Neural Genetics Society (2016&ndash;2017).</li>
+    <li>CompGen Computational Genomics Graduate Fellowship (University of Illinois and Mayo Clinic), 2017 and 2018.</li>
+    <li>Excellence in Teaching Award, Molecular and Cellular Biology, University of Illinois, 2018.</li>
+    <li>Illinois Image of Research Competition, Second Prize, 2017; IGB Image of the Month, 2015.</li>
+    <li>Alice Carlene Helm Microbiology Award Fellowship, University of Illinois, 2013.</li>
+  </ul>
+</section>
+
+<section id="outreach">
+  <h2>Outreach</h2>
+  <ul>
+    <li>Chair, PNRI Science and Art Committee (2024&ndash;): artwork made from PNRI scientists' images, shown around
+      the institute and at events.</li>
+    <li>World of Genomics (2017&ndash;2019): built a virtual-reality museum exhibit on neuroscience, shown at the
+      National Academy of Sciences, Saint Louis Science Center and Chicago Field Museum.</li>
+    <li>Genome Day (2013&ndash;2019): hands-on genomics demonstrations for K&ndash;8 children at the local science museum.</li>
+    <li>Rochester Bridges to the Doctorate (2010&ndash;2013): trained deaf and hard-of-hearing high school and undergraduate
+      students in laboratory research.</li>
+  </ul>
+</section>
+
+<footer>
+  <a href="https://www.linkedin.com/in/chseward/">LinkedIn</a> &middot;
+  <a href="https://orcid.org/0000-0002-0536-0190">ORCID 0000-0002-0536-0190</a> &middot;
+  <a href="https://scholar.google.com/citations?user=d4uQuFsAAAAJ">Google Scholar</a> &middot;
+  <a href="https://www.researchgate.net/profile/Christopher-Seward">ResearchGate</a> &middot;
+  <a href="mailto:seward.chris@gmail.com">seward.chris@gmail.com</a><br>
+  <a href="cv.html">CV</a> &middot; <a href="biosketch.html">Biosketch</a><br>
+  <a href="https://pnri.org/">Pacific Northwest Research Institute</a> &middot;
+  <a href="https://pnri.org/carvalho-lab/">Carvalho Lab</a> &middot;
+  <a href="https://pnri.org/galas-lab/decoding-stress-galas/">Stubbs Lab</a> &middot;
+  <a href="https://trackhub.pnri.org/stubbs/ucsc/">MRSB track hubs</a><br>
+  Updated November 2026.
+</footer>
+
+</div>
+</body>
+</html>
